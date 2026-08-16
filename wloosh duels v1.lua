@@ -2677,7 +2677,7 @@ local function createHeadLabels(char)
     discordLbl.Size = UDim2.new(1, 0, 0, 26)
     discordLbl.Position = UDim2.new(0, 0, 0, 26)
     discordLbl.BackgroundTransparency = 1
-    discordLbl.Text = "discord.gg/VMB5ywPY7"
+    discordLbl.Text = "discord.gg/nebuYy3qmh"
     discordLbl.TextColor3 = Color3.fromRGB(255, 255, 255)
     discordLbl.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
     discordLbl.TextStrokeTransparency = 0
