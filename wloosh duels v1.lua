@@ -351,7 +351,7 @@ local titleLbl = Instance.new("TextLabel", header)
 titleLbl.Size                   = UDim2.new(1, -150, 1, 0)
 titleLbl.Position               = UDim2.new(0, 34, 0, 0)
 titleLbl.BackgroundTransparency = 1
-titleLbl.Text                   = "yousef duels v2"
+titleLbl.Text                   = "wloosh duels v1"
 titleLbl.TextColor3             = Color3.fromRGB(255, 255, 255)
 titleLbl.Font                   = Enum.Font.GothamBlack
 titleLbl.TextSize               = 13
@@ -2138,15 +2138,15 @@ end)
 
 -- ========== AUTO PLAY (BOX) ==========
 local leftWaypoints = {
-    Vector3.new(-476.85, -6.59, 94.91),   -- going 1  (yousef)
-    Vector3.new(-485.55, -4.53, 100.61),  -- going 2  (yousef)
+    Vector3.new(-476.85, -6.59, 94.91),   -- going 1  (wloosh)
+    Vector3.new(-485.55, -4.53, 100.61),  -- going 2  (wloosh)
     Vector3.new(-475.68, -6.89, 92.76),   -- return 1 (K7)
     Vector3.new(-476.50, -6.46, 27.58),   -- return 2 (K7)
     Vector3.new(-482.42, -5.03, 27.84),   -- return 3 (K7)
 }
 local rightWaypoints = {
-    Vector3.new(-475.77, -6.57, 26.76),   -- going 1  (yousef)
-    Vector3.new(-485.85, -4.48, 20.13),   -- going 2  (yousef)
+    Vector3.new(-475.77, -6.57, 26.76),   -- going 1  (wloosh)
+    Vector3.new(-485.85, -4.48, 20.13),   -- going 2  (wloosh)
     Vector3.new(-476.21, -6.63, 27.46),   -- return 1 (K7)
     Vector3.new(-476.66, -6.39, 92.44),   -- return 2 (K7)
     Vector3.new(-481.94, -5.03, 92.42),   -- return 3 (K7)
@@ -2662,7 +2662,7 @@ local function createHeadLabels(char)
     if not head then return end
     
     overheadGui = Instance.new("BillboardGui")
-    overheadGui.Name = "yousef_duels_OverheadInfo"
+    overheadGui.Name = "wloosh_duels_OverheadInfo"
     overheadGui.Size = UDim2.new(0, 250, 0, 100)
     overheadGui.StudsOffset = Vector3.new(0, 3, 0)
     overheadGui.AlwaysOnTop = true
@@ -3157,7 +3157,7 @@ local function buildMobileButtons()
             if def.key == "tpDown" then runTPFloor(); return end
             if def.key == "instaReset" then cursedInstaReset(); return end
             if def.key == "taunt" then
-                local message = "Moged by yousef"
+                local message = "Moged by wloosh"
                 local chatService = game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
                 if chatService then
                     local sayMsg = chatService:FindFirstChild("SayMessageRequest")
@@ -3299,7 +3299,7 @@ local function buildGui()
     local BTN_ACT  = Color3.fromRGB(0, 80, 200)
     local INP_BG   = Color3.fromRGB(20,  20,  26)
 
-    for _, name in ipairs({"yousef duels v2", "YousefMobileButtons", "yousefStealBar", "yousefRagdollTimer"}) do
+    for _, name in ipairs({"wloosh duels v1", "WlooshMobileButtons", "wlooshStealBar", "wlooshRagdollTimer"}) do
         local old = game:GetService("CoreGui"):FindFirstChild(name)
         if old then old:Destroy() end
         local pg = LP:FindFirstChild("PlayerGui")
@@ -3307,7 +3307,7 @@ local function buildGui()
     end
 
     local gui = Instance.new("ScreenGui")
-    gui.Name = "yousef duels v2"; gui.ResetOnSpawn = false
+    gui.Name = "wloosh duels v1"; gui.ResetOnSpawn = false
     gui.DisplayOrder = 10; gui.IgnoreGuiInset = true
     pcall(function() if syn and syn.protect_gui then syn.protect_gui(gui) end end)
     if not pcall(function() gui.Parent = game:GetService("CoreGui") end) then
@@ -3396,7 +3396,7 @@ local function buildGui()
 
     local Title = Instance.new("TextLabel", Header)
     Title.Size = UDim2.new(0,180,1,0); Title.Position = UDim2.new(0,14,0,0)
-    Title.BackgroundTransparency = 1; Title.Text = "yousef duels v2"
+    Title.BackgroundTransparency = 1; Title.Text = "wloosh duels v1"
     Title.TextColor3 = WHITE; Title.Font = Enum.Font.GothamBlack
     Title.TextSize = 20; Title.TextXAlignment = Enum.TextXAlignment.Left; Title.ZIndex = 4
 
@@ -3419,7 +3419,7 @@ local function buildGui()
     miniToggleBtn.Size = UDim2.new(0, 240, 0, 52)
     miniToggleBtn.Position = UDim2.new(0.02, 0, 0.45, 60)
     miniToggleBtn.BackgroundColor3 = Color3.fromRGB(0, 80, 200)
-    miniToggleBtn.Text = "yousef duels v2"
+    miniToggleBtn.Text = "wloosh duels v1"
     miniToggleBtn.TextColor3 = WHITE
     miniToggleBtn.Font = Enum.Font.GothamBlack
     miniToggleBtn.TextSize = 25
@@ -3775,7 +3775,7 @@ local function buildGui()
     mkActionRow(sfCombat, "Lagger Toggle", nil, KB.LaggerToggle)
     mkActionRow(sfCombat, "Insta Reset",   nil, KB.InstaReset)
     mkActionRow(sfCombat, "Taunt",         function()
-        local message = "Yousef hub  is better ur trash lol"
+        local message = "Wloosh Hub  is better ur trash lol"
         local chatService = game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
         if chatService then
             local sayMsg = chatService:FindFirstChild("SayMessageRequest")
@@ -3809,7 +3809,7 @@ local function buildGui()
     setMedusaResetVisual = mkToggle(sfCombat, "Medusa Reset",   function(on) medusaResetEnabled=on; saveConfig() end, medusaResetEnabled)
     setUnwalkVisual      = mkToggle(sfCombat, "Unwalk",         function(on) unwalkEnabled=on; if on then startUnwalk() else stopUnwalk() end; saveConfig() end, unwalkEnabled)
 
-    mkSect(sfCombat, "Yousef")
+    mkSect(sfCombat, "Wloosh")
     setBatCounterVisual  = mkToggle(sfCombat, "Bat Counter",    function(on) batCounterEnabled=on; if on then startBatCounter() else stopBatCounter() end; saveConfig() end, batCounterEnabled)
     setMedusaVisual      = mkToggle(sfCombat, "Medusa Counter", function(on) medusaCounterEnabled=on; if on then setupMedusa(LP.Character) else stopMedusaCounter() end; saveConfig() end, medusaCounterEnabled)
 
@@ -4514,7 +4514,7 @@ local function buildGui()
 
     mainFrame.Visible = false
     miniToggleBtn.Visible = false
-    print("yousef duels v2 GUI Fully Loaded")
+    print("wloosh duels v1 GUI Fully Loaded")
 end
 
 local function _runIntro(onComplete)
@@ -4563,7 +4563,7 @@ local function _runIntro(onComplete)
 
     local tY = Instance.new("TextLabel", container)
     tY.Size = UDim2.new(1,0,0,60); tY.Position = UDim2.new(0,0,0,10)
-    tY.BackgroundTransparency = 1; tY.Text = "YOUSEF DUELS V2"
+    tY.BackgroundTransparency = 1; tY.Text = "WLOOSH DUELS V1"
     tY.TextColor3 = Color3.fromRGB(0,170,255)
     tY.Font = Enum.Font.GothamBlack; tY.TextSize = 40
     tY.TextXAlignment = Enum.TextXAlignment.Center
@@ -4620,7 +4620,7 @@ local function _runIntro(onComplete)
         tTop.Size  = UDim2.new(1, 0, 0, 60)
         tTop.Position = UDim2.new(0, 0, 0, 0)
         tTop.BackgroundTransparency = 1
-        tTop.Text  = "YOUSEF DUELS V2"
+        tTop.Text  = "WLOOSH DUELS V1"
         tTop.TextColor3 = Color3.fromRGB(0, 170, 255)
         tTop.Font  = Enum.Font.GothamBlack
         tTop.TextSize = 40
@@ -4639,7 +4639,7 @@ local function _runIntro(onComplete)
         tBot.Size  = UDim2.new(1, 0, 0, 60)
         tBot.Position = UDim2.new(0, 0, 0, -halfH)  -- offset upward to show lower half
         tBot.BackgroundTransparency = 1
-        tBot.Text  = "YOUSEF DUELS V2"
+        tBot.Text  = "WLOOSH DUELS V1"
         tBot.TextColor3 = Color3.fromRGB(0, 170, 255)
         tBot.Font  = Enum.Font.GothamBlack
         tBot.TextSize = 40
@@ -4963,6 +4963,6 @@ _runIntro(function()
             end
         end
     end)
-    print("yousef duels v2 Fully Loaded")
+    print("wloosh duels v1 Fully Loaded")
 end)
 
